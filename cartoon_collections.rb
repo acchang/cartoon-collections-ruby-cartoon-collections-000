@@ -3,11 +3,17 @@
 #   prints out the 7 dwarfs in a numbered list
 
 def roll_call_dwarves(dwarf_array)
+count=0
   dwarf_array.each_with_index do |dwarf, index|
     indexplusone = index + 1
     puts "#{indexplusone}. #{dwarf}"
-  end
+    # while count<3
+  # end
 end
+end
+
+roll_call_dwarves(["a","b","c","d","e","f"])
+
 
 
 # #summon_captain_planet
@@ -66,3 +72,13 @@ cheese_types = ["cheddar", "gouda", "camembert"]
   end
   nil
 end
+
+#return an array of any word starting with B
+
+def words_with_b(array)
+new_array=array.collect do |x|
+    return x if x.start_with?("b")
+end
+p new_array
+end
+words_with_b(["ben","bob","sarah"])
